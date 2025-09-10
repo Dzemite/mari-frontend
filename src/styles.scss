@@ -1,0 +1,249 @@
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+@use 'tailwindcss';
+@use 'sass:map';
+
+/// Adds the error colors to the given palette.
+@function _patch-error-palette($palette) {
+  @return map.merge(
+    $palette,
+    (
+      error: (
+        0: #000000,
+        10: #410002,
+        20: #690005,
+        25: #7e0007,
+        30: #93000a,
+        35: #a80710,
+        40: #ba1a1a,
+        50: #de3730,
+        60: #ff5449,
+        70: #ff897d,
+        80: #ffb4ab,
+        90: #ffdad6,
+        95: #ffedea,
+        98: #fff8f7,
+        99: #fffbff,
+        100: #ffffff,
+      ),
+    )
+  );
+}
+
+$emerald-palette: _patch-error-palette((
+  0: #000000,
+  10: #0b1f1a,
+  20: #0f352b,
+  25: #124132,
+  30: #154d3a,
+  35: #1a5942,
+  40: #276749, // основной цвет
+  50: #2f8059,
+  60: #4a996f,
+  70: #6db288,
+  80: #99cdb0,
+  90: #c5e8d4,
+  95: #e0f4e8,
+  98: #f4fbf7,
+  99: #f9fdfb,
+  100: #ffffff,
+
+  secondary: (
+    0: #000000,
+    10: #141e1b,
+    20: #28332e,
+    25: #33403a,
+    30: #3f4d46,
+    35: #4b5952,
+    40: #57665e,
+    50: #707f77,
+    60: #899990,
+    70: #a3b3aa,
+    80: #becdc5,
+    90: #dae8e0,
+    95: #e9f4ee,
+    98: #f5fbf8,
+    99: #fafdfc,
+    100: #ffffff,
+  ),
+
+  neutral: (
+    0: #000000,
+    4: #0e0f0e,
+    6: #131513,
+    10: #1a1c1a,
+    12: #1f211f,
+    17: #292b29,
+    20: #2e302e,
+    22: #343634,
+    24: #383a38,
+    25: #3b3d3b,
+    30: #464846,
+    35: #525452,
+    40: #5e605e,
+    50: #777977,
+    60: #919391,
+    70: #abadab,
+    80: #c7c9c7,
+    87: #dbdddb,
+    90: #e3e5e3,
+    92: #e9ebe9,
+    94: #eff1ef,
+    95: #f2f4f2,
+    96: #f4f6f4,
+    98: #fafcfb,
+    99: #fdfefd,
+    100: #ffffff,
+  ),
+
+  neutral-variant: (
+    0: #000000,
+    10: #181d1b,
+    20: #2d322f,
+    25: #383d3a,
+    30: #444946,
+    35: #4f5451,
+    40: #5b605d,
+    50: #747974,
+    60: #8e938e,
+    70: #a9ada9,
+    80: #c4c8c4,
+    90: #e0e3e0,
+    95: #eff2ef,
+    98: #f9fbfa,
+    99: #fdfefd,
+    100: #ffffff,
+  ),
+));
+
+html {
+  @include mat.theme((
+    color: (
+      primary: $emerald-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: light;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+}
+
+// Это основные цвета для Tailwind
+@theme {
+  --color-green-dark: #276749;
+  --color-green-light: #68D391;
+  --color-tx-white: #F6F6F6;
+  --color-tx-black: #0E0C0C;
+}
+
+// @font-face {
+//   font-family: 'SFProDisplay';
+//   src: url('assets/fonts/sf-pro-display/SFPRODISPLAYTHIN.OTF') format('opentype');
+//   font-weight: 100;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'SFProDisplay';
+//   src: url('assets/fonts/sf-pro-display/SFPRODISPLAYLIGHT.OTF') format('opentype');
+//   font-weight: 300;
+//   font-style: normal;
+// }
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('assets/fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: 400;
+  /* Обычно Roman = Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('assets/fonts/sf-pro-display/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('assets/fonts/sf-pro-display/SFPRODISPLAYBOLD.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'SFProDisplay', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.big-button {
+  min-height: 70px !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  line-height: 100% !important;
+  letter-spacing: 0px !important;
+}
+
+app-innovative-diagnostics {
+  .mat-accordion {
+    .mat-expansion-panel {
+      // border-top: 1px solid #10101030;
+      // &:last-of-type {
+      //   border-bottom: 1px solid #10101030;
+      // }
+      // &:not([class*=mat-expanded]) {
+      //   border-radius: var(--mat-expansion-container-shape, 0px);
+      //   box-shadow: none;
+      // }
+      .mat-expansion-panel-header {
+        height: var(--mat-expansion-header-collapsed-state-height, 80px);
+      }
+
+      .mat-expansion-panel-header-title {
+        font-size: 24px;
+        opacity: 0.5;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 33px */
+        letter-spacing: -2px;
+        text-transform: capitalize;
+      }
+
+      .mat-expansion-panel-body {
+        display: flex;
+      }
+
+      &.mat-expanded {
+        background-color: #276749;
+        color: #fff !important;
+        
+        .mat-expansion-panel-header-title, .mat-expansion-panel-header-description, .mat-expansion-indicator svg {
+          color: #fff !important;
+          fill: #fff !important;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
