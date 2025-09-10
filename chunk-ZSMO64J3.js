@@ -1,0 +1,2 @@
+import{Ba as i,ma as n,ya as a,za as o}from"./chunk-R2NC5EWG.js";var m=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-main-page"]],decls:2,vars:0,consts:[[1,"w-full","h-[800px]"]],template:function(e,s){e&1&&(a(0,"div",0),i(1,` hello!
+`),o())},styles:["[_nghost-%COMP%]{display:flex;flex-direction:column;align-items:center;height:100%}"],changeDetection:0})};export{m as MainPageComponent};
