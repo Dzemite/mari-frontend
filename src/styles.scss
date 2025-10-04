@@ -187,6 +187,14 @@ html {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Pixelify Sans';
+  src: url('assets/fonts/pixelify-sans/PixelifySans[wght].ttf') format('truetype');
+  font-weight: 100 900; // если это variable font (wght)
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
   font-family: 'SFProDisplay', sans-serif;
@@ -205,45 +213,37 @@ body {
   letter-spacing: 0px !important;
 }
 
-app-innovative-diagnostics {
-  .mat-accordion {
-    .mat-expansion-panel {
-      // border-top: 1px solid #10101030;
-      // &:last-of-type {
-      //   border-bottom: 1px solid #10101030;
-      // }
-      // &:not([class*=mat-expanded]) {
-      //   border-radius: var(--mat-expansion-container-shape, 0px);
-      //   box-shadow: none;
-      // }
-      .mat-expansion-panel-header {
-        height: var(--mat-expansion-header-collapsed-state-height, 80px);
-      }
+.mat-accordion {
+  .mat-expansion-panel {
+    border-top: 1px solid #181818;
+    &:last-of-type {
+      border-bottom: 1px solid #181818;
+    }
+    // &:not([class*=mat-expanded]) {
+      border-radius: var(--mat-expansion-container-shape, 0px) !important;
+      box-shadow: none !important;
+    // }
+    .mat-expansion-panel-header {
+      height: var(--mat-expansion-header-collapsed-state-height, 4.2vw);
+    }
 
-      .mat-expansion-panel-header-title {
-        font-size: 24px;
-        opacity: 0.5;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 110%; /* 33px */
-        letter-spacing: -2px;
-        text-transform: capitalize;
-      }
+    .mat-expansion-panel-body {
+      display: flex;
+    }
 
-      .mat-expansion-panel-body {
-        display: flex;
-      }
-
-      &.mat-expanded {
-        background-color: #276749;
-        color: #fff !important;
-        
-        .mat-expansion-panel-header-title, .mat-expansion-panel-header-description, .mat-expansion-indicator svg {
-          color: #fff !important;
-          fill: #fff !important;
-          opacity: 1;
-        }
+    &.mat-expanded {
+      // background-color: #276749;
+      // color: #fff !important;
+      
+      .mat-expansion-panel-header-title, .mat-expansion-panel-header-description, .mat-expansion-indicator svg {
+        // color: #fff !important;
+        // fill: #fff !important;
+        // opacity: 1;
       }
     }
   }
+}
+
+.pixel-text {
+  font-family: 'Pixelify Sans', sans-serif;
 }

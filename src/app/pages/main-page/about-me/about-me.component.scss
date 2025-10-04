@@ -1,0 +1,30 @@
+:host {
+  display: block;
+
+  .croc-big-img {
+    background-image: url('/assets/images/croc-big.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .figma {
+    background-image: url('/assets/images/figma.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .blue-rect {
+    background-image: url('/assets/images/blue-rect.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .rect {
+    width: 0.4vw;
+    height: 0.4vw;
+    background-color: black;
+  }
+}

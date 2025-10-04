@@ -1,8 +1,11 @@
-<div class="relative w-full flex flex-col justify-between bg-black text-tx-white">
-    <section class="flex justify-center w-full h-[5.209vw] gap-[20px]">
+<div class="relative w-full flex flex-col justify-between text-tx-white" [ngStyle]="{'background-color': (headerService.headerColor$ | async)}">
+    <section class="w-full h-[5.209vw]">
+        <!-- this is for header -->
+    </section>
+    <section class="flex justify-center w-full h-[5.209vw] gap-[20px] fixed z-9999" [ngStyle]="{'background-color': (headerService.headerColor$ | async)}">
         <div class="w-[46vw] flex justify-between items-center">
             <div class="flex flex-col">
-                <span class="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-sm">NiKolaeva Maria</span>
+                <span class="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-sm uppercase">Nikolaeva Maria</span>
                 <span class="2xl:text-lg xl:text-base lg:text-sm md:text-xs sm:text-[10px] text-[10px] opacity-50">UX/UI & Product Designer</span>
             </div>
             <div class="flex flex-col w-[8.55vw] whitespace-nowrap">
@@ -21,48 +24,50 @@
             <div class="2xl:text-lg xl:text-base lg:text-sm md:text-xs sm:text-[10px] text-[10px] opacity-100 text-black">.</div>
         </div>
     </section>
-    <section class="flex justify-center w-full gap-[20px]">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 604" fill="none" class="w-[46vw] h-[32vw]">
-            <path d="M0 604V0H160.723V85.4806H397.83V170.022H534.684V423.241L715.54 424.585V0H880V604H715.54V519.459H538.133V433.978H372.369V179.415H160.723L162.315 604H0Z" fill="#181818"/>
-        </svg>
-    
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 604" fill="none" class="w-[46vw] h-[32vw]">
-            <path d="M880 604H756.438V159.476H752.219L490.027 599.396H389.973L127.178 159.476H122.959V604H0V0H156.11L437.589 476.754H442.411L723.288 0H880V604Z" fill="#181818"/>
-        </svg>
-    </section>
-    <section class="flex justify-center w-full gap-[20px] absolute left-0 bottom-0">
-        <div class="w-[46vw] h-[32vw] flex flex-col">
-            <div class="
-                avatar-img absolute top-[12.85vw] left-[12.3vw] rounded-full
-                2xl:w-[9.5vw] 2xl:h-[9.5vw]
-                xl:w-[9.5vw] xl:h-[9.5vw]
-                lg:w-[9vw] lg:h-[9vw]
-                md:w-[8.5vw] md:h-[8.5vw]
-                sm:w-[8vw] sm:h-[8vw]
-                w-[8vw] h-[8vw]"></div>
-            <div class="
-                croc-img absolute bottom-[22.8vw] left-[26vw]
-                2xl:w-[6vw] 2xl:h-[6.5vw]
-                xl:w-[5.5vw] xl:h-[6vw]
-                lg:w-[5vw] lg:h-[5.5vw]
-                md:w-[4.5vw] md:h-[5vw]
-                sm:w-[4vw] sm:h-[4.5vw]
-                w-[4vw] h-[4.5vw]"></div>
-            <div class="absolute bottom-[1vw] left-[12.3vw] flex flex-col">
-                <span class="2xl:text-3xl xl:text-2xl lg:text-xl md:text-base text-sm">Привет!</span>
-                <span class="2xl:text-3xl xl:text-2xl lg:text-xl md:text-base text-sm">Я, Николаева Мария</span>
-                <span class="2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl text-xl opacity-50 mt-[0.8vw]">UX/UI & Product Designer</span>
+    @if(headerService.headerFull$ | async) {
+        <section class="flex justify-center w-full gap-[20px]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 604" fill="none" class="w-[46vw] h-[32vw]">
+                <path d="M0 604V0H160.723V85.4806H397.83V170.022H534.684V423.241L715.54 424.585V0H880V604H715.54V519.459H538.133V433.978H372.369V179.415H160.723L162.315 604H0Z" fill="#181818"/>
+            </svg>
+        
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 604" fill="none" class="w-[46vw] h-[32vw]">
+                <path d="M880 604H756.438V159.476H752.219L490.027 599.396H389.973L127.178 159.476H122.959V604H0V0H156.11L437.589 476.754H442.411L723.288 0H880V604Z" fill="#181818"/>
+            </svg>
+        </section>
+        <section class="flex justify-center w-full gap-[20px] absolute left-0 bottom-0">
+            <div class="w-[46vw] h-[32vw] flex flex-col">
+                <div class="
+                    avatar-img absolute top-[12.85vw] left-[12.3vw] rounded-full
+                    2xl:w-[9.5vw] 2xl:h-[9.5vw]
+                    xl:w-[9.5vw] xl:h-[9.5vw]
+                    lg:w-[9vw] lg:h-[9vw]
+                    md:w-[8.5vw] md:h-[8.5vw]
+                    sm:w-[8vw] sm:h-[8vw]
+                    w-[8vw] h-[8vw]"></div>
+                <div class="
+                    croc-img absolute bottom-[22.8vw] left-[26vw]
+                    2xl:w-[6vw] 2xl:h-[6.5vw]
+                    xl:w-[5.5vw] xl:h-[6vw]
+                    lg:w-[5vw] lg:h-[5.5vw]
+                    md:w-[4.5vw] md:h-[5vw]
+                    sm:w-[4vw] sm:h-[4.5vw]
+                    w-[4vw] h-[4.5vw]"></div>
+                <div class="absolute bottom-[1vw] left-[12.3vw] flex flex-col">
+                    <span class="2xl:text-3xl xl:text-2xl lg:text-xl md:text-base text-sm">Привет!</span>
+                    <span class="2xl:text-3xl xl:text-2xl lg:text-xl md:text-base text-sm">Я, Николаева Мария</span>
+                    <span class="2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl text-xl opacity-50 mt-[0.8vw]">UX/UI & Product Designer</span>
+                </div>
             </div>
-        </div>
-        <div class="w-[46vw] h-[32vw] flex justify-between">
-            <div class="mt-1 ml-[1px] w-[8.5vw] 2xl:text-lg xl:text-sm text-xs">
-                <span>Меня вдохновляет моя работа</span>
+            <div class="w-[46vw] h-[32vw] flex justify-between">
+                <div class="mt-1 ml-[1px] w-[8.5vw] 2xl:text-lg xl:text-sm text-xs">
+                    <span>Меня вдохновляет моя работа</span>
+                </div>
+                <div class="mt-1 mr-[1px] flex flex-col text-end">
+                    <span class="underline underline-offset-4 2xl:text-lg xl:text-sm text-xs cursor-pointer">Behance</span>
+                    <span class="underline underline-offset-4 2xl:text-lg xl:text-sm text-xs cursor-pointer">Telegram</span>
+                    <span class="underline underline-offset-4 2xl:text-lg xl:text-sm text-xs cursor-pointer">Резюме pdf</span>
+                </div>
             </div>
-            <div class="mt-1 mr-[1px] flex flex-col text-end">
-                <span class="underline underline-offset-4 2xl:text-lg xl:text-sm text-xs cursor-pointer">Behance</span>
-                <span class="underline underline-offset-4 2xl:text-lg xl:text-sm text-xs cursor-pointer">Telegram</span>
-                <span class="underline underline-offset-4 2xl:text-lg xl:text-sm text-xs cursor-pointer">Резюме pdf</span>
-            </div>
-        </div>
-    </section>
+        </section>
+    }
 </div>

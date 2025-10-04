@@ -1,0 +1,123 @@
+<div class="flex flex-col mt-[5vw] mx-[4vw]">
+    <div class="flex">
+        <div class="flex flex-col basis-[50%] gap-[0.5vw]">
+            <span class="text-[1.9vw] font-semibold leading-[120%] uppercase">Проектирую интерфейсы для сайтов и мобильных приложений более 2-х лет (B2B, B2C, CRM, E-commerce).</span>
+            <span class="w-[70%] font-medium leading-[130%] tracking-[-0.7px] opacity-50">Меня вдохновляют люди. Их привычки, невысказанные потребности и даже их ошибки. В этом и есть магия UX/UI — расшифровать это и создать такой цифровой опыт, который будет чувствоваться естественно и органично. Когда я вижу, что с помощью продуманного интерфейса человек сэкономил время, избежал путаницы или просто улыбнулся — я понимаю, что все было не зря. Это и есть мой главный двигатель в дизайне.</span>
+        </div>
+        <div class="flex flex-col basis-[50%]">
+            <mat-accordion class="w-full">
+                @for (item of data; track item; let i = $index) {
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <div class="flex gap-3 leading-[2vw] whitespace-nowrap">
+                                    <span class="text-[2vw]">{{item.title}}</span>
+                                    <span class="text-[1vw]">{{item.subtitle}}</span>
+                                    @if(item.link) {
+                                        <a class="text-blue-500 text-[1vw]" [href]="item.link.url" target="_blank">{{item.link.title}}</a>
+                                    }
+                                </div>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div class="text-[1vw] leading-[130%]">
+                            <markdown>{{item.description}}</markdown>
+                        </div>
+                    </mat-expansion-panel>
+                }
+            </mat-accordion>
+        </div>
+    </div>
+    <div class="flex mt-[5vw] justify-between">
+        <div class="basis-[33%] flex flex-col justify-between items-start">
+            <div class="flex flex-col gap-[1vw] w-[24vw]">
+                <div class="uppercase">
+                    <span class="text-[3.5vw] leading-[100%]"><span class="pixel-text text-[4vw]">s</span>oft—<span class="pixel-text text-[4vw]">s</span>kills</span>
+                </div>
+                <div class="flex flex-wrap uppercase text-[0.8vw] text-[#00000080]">
+                    <div class="flex gap-1 items-center mr-2">
+                        <div class="rect"></div>
+                        <span>эмпатия</span>
+                    </div>
+                    <div class="flex gap-1 items-center mr-2">
+                        <div class="rect"></div>
+                        <span>креативность</span>
+                    </div>
+                    <div class="flex gap-1 items-center mr-2">
+                        <div class="rect"></div>
+                        <span>Ответственность</span>
+                    </div>
+                    <div class="flex gap-1 items-center mr-2">
+                        <div class="rect"></div>
+                        <span>Коммуникабельность</span>
+                    </div>
+                    <div class="flex gap-1 items-center mr-2">
+                        <div class="rect"></div>
+                        <span>Критическое мышление</span>
+                    </div>
+                    <div class="flex gap-1 items-center mr-2">
+                        <div class="rect"></div>
+                        <span>Эффективное сотрудничество</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+                <span class="font-medium leading-[120%] opacity-70">Активно импользую нейросети</span>
+                <div class="flex gap-[10px]">
+                    <div class="text-white bg-black rounded-[5px] h-[45px] min-w-[45px] flex justify-center items-center px-[10px]">YandexGPT</div>
+                    <div class="text-white bg-black rounded-[5px] h-[45px] min-w-[45px] flex justify-center items-center"></div>
+                    <div class="text-white bg-black rounded-[5px] h-[45px] min-w-[45px] flex justify-center items-center"></div>
+                    <div class="text-white bg-black rounded-[5px] h-[45px] min-w-[45px] flex justify-center items-center"></div>
+                    <div class="text-white bg-black rounded-[5px] h-[45px] min-w-[45px] flex justify-center items-center px-[10px]">Шедеврум</div>
+                </div>
+            </div>
+        </div>
+        <div class="basis-[33%] ">
+            <div class="croc-big-img h-[25vw] w-[31vw]"></div>
+        </div>
+        <div class="basis-[33%] flex justify-end">
+            <div class="flex flex-col justify-between items-start">
+                <div class="flex flex-col gap-[1vw] w-[24vw]">
+                    <div class="uppercase">
+                        <span class="text-[3.5vw] leading-[100%]">ha<span class="pixel-text text-[4vw]">r</span>d—<span class="pixel-text text-[4vw]">s</span>kills</span>
+                    </div>
+                    <div class="flex flex-wrap uppercase text-[0.8vw] text-[#00000080]">
+                        <div class="flex gap-1 items-center mr-2">
+                            <div class="rect"></div>
+                            <span>Research</span>
+                        </div>
+                        <div class="flex gap-1 items-center mr-2">
+                            <div class="rect"></div>
+                            <span>UX-исследования</span>
+                        </div>
+                        <div class="flex gap-1 items-center mr-2">
+                            <div class="rect"></div>
+                            <span>UX-writing</span>
+                        </div>
+                        <div class="flex gap-1 items-center mr-2">
+                            <div class="rect"></div>
+                            <span>Юзабилити-тестирование</span>
+                        </div>
+                        <div class="flex gap-1 items-center mr-2">
+                            <div class="rect"></div>
+                            <span>Прототипирование</span>
+                        </div>
+                        <div class="flex gap-1 items-center mr-2">
+                            <div class="rect"></div>
+                            <span>UI Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-[10px]">
+                    <span class="font-medium leading-[120%] opacity-70">Программы в работе</span>
+                    <div class="flex gap-[10px]">
+                        <div class="text-white bg-black rounded-[5px] h-[45px] min-w-[45px] flex justify-center items-center px-[10px]"> <div class="figma w-[25px] h-[25px]"></div> </div>
+                        <div class="text-white bg-black rounded-[5px] h-[45px] min-w-[45px] flex justify-center items-center text-[26px]">PS</div>
+                        <div class="text-white bg-black rounded-[5px] h-[45px] min-w-[45px] flex justify-center items-center text-[26px]">AN</div>
+                        <div class="text-white bg-black rounded-[5px] h-[45px] min-w-[45px] flex justify-center items-center text-[26px]">ID</div>
+                        <div class="text-white bg-black rounded-[5px] h-[45px] min-w-[45px] flex justify-center items-center px-[10px]"> <div class="blue-rect w-[25px] h-[25px]"></div> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
