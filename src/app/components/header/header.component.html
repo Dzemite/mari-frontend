@@ -5,23 +5,23 @@
     <section class="flex justify-center w-full h-[5.209vw] gap-[20px] fixed z-9999" [ngStyle]="{'background-color': (headerService.headerColor$ | async)}">
         <div class="w-[46vw] flex justify-between items-center">
             <div class="flex flex-col">
-                <span class="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-sm uppercase">Nikolaeva Maria</span>
-                <span class="2xl:text-lg xl:text-base lg:text-sm md:text-xs sm:text-[10px] text-[10px] opacity-50">UX/UI & Product Designer</span>
+                <span class="text-[1.1vw] uppercase">Nikolaeva Maria</span>
+                <span class="text-[0.8vw] opacity-50">UX/UI & Product Designer</span>
             </div>
             <div class="flex flex-col w-[8.55vw] whitespace-nowrap">
-                <span class="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-sm uppercase">Санкт-петербург, Россия</span>
-                <span class="2xl:text-lg xl:text-base lg:text-sm md:text-xs sm:text-[10px] text-[10px] opacity-50">(GMT+3)</span>
+                <span class="text-[1.1vw] uppercase">Санкт-петербург, Россия</span>
+                <span class="text-[0.8vw] opacity-50">(GMT+3)</span>
             </div>
         </div>
         <div class="w-[46vw] flex flex-col justify-center items-end">
-            <div class="flex gap-[1.056vw] 2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm text-sm uppercase">
+            <div class="flex gap-[1.056vw] text-[1.1vw] uppercase">
                 <span class="cursor-pointer">обо мне</span>
                 <span class="cursor-pointer">скилы</span>
                 <span class="cursor-pointer">образование</span>
                 <span class="cursor-pointer">проекты</span>
                 <span class="cursor-pointer">видео</span>
             </div>
-            <div class="2xl:text-lg xl:text-base lg:text-sm md:text-xs sm:text-[10px] text-[10px] opacity-100 text-black">.</div>
+            <div class="text-[0.8vw] opacity-100 text-black">.</div>
         </div>
     </section>
     @if(headerService.headerFull$ | async) {
