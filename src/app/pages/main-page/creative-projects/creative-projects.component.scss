@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  width: 100%;
+
+  .cavalli {
+    background-image: url('/assets/images/cavalli.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .m-gallery {
+    background-image: url('/assets/images/m-gallery.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .infographics {
+    background-image: url('/assets/images/infographics.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

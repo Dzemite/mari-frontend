@@ -3,4 +3,13 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
+  margin-left: 4vw;
+  margin-right: 4vw;
+
+  app-about-me,
+  app-skills,
+  app-education,
+  app-projects {
+    scroll-margin-top: 100px; /* или сколько нужно */
+  }
 }

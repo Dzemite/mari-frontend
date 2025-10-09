@@ -1,3 +1,33 @@
-<div class="footer w-full h-[540px] mt-[70px] bg-black">
-    <!-- Add footer content here -->
+<div class="footer w-full h-[23vw] mt-[3.5vw] pt-[3.5vw] pb-[1.5vw] px-[4vw] bg-black flex justify-between">
+    <div class="flex flex-col justify-between">
+        <div class="flex flex-col gap-[1vw]">
+            <div class="flex flex-col">
+                <span class="text-[1.1vw] text-[#F6F6F6] uppercase">Nikolaeva Maria</span>
+                <span class="text-[0.8vw] text-[#565656] opacity-50">UX/UI & Product Designer</span>
+            </div>
+            <div class="avatar-img w-[8vw] h-[8vw] rounded-full"></div>
+        </div>
+        <span class="text-[0.7vw] text-[#ffffff50]">© Nikolaeva Maria 2025</span>
+    </div>
+    <div class="flex flex-col justify-center items-center gap-[1vw]">
+        <div class="croc-img h-[6vw] w-[5vw]"></div>
+        <div class="font-semibold text-[1vw] text-center text-white opacity-50 font-medium leading-[110%]">
+            <markdown>{{text}}</markdown>
+        </div>
+        <a href="https://t.me/MariaF_Nikolaeva" target="_blank" class="underline underline-offset-4 text-white text-[1.2vw]">Telegram</a>
+    </div>
+    <div class="flex flex-col gap-[1vw]">
+        <div class="h-[5vw] w-[5vw] bg-white rounded-full flex justify-center items-center cursor-pointer" (click)="scrollUp()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="5vw" height="5vw" viewBox="0 0 100 101" fill="none">
+                <path d="M51.4142 34.9564C50.6332 34.1753 49.3668 34.1753 48.5858 34.9564L35.8579 47.6843C35.0768 48.4654 35.0768 49.7317 35.8579 50.5127C36.6389 51.2938 37.9052 51.2938 38.6863 50.5127L50 39.199L61.3137 50.5127C62.0948 51.2938 63.3611 51.2938 64.1421 50.5127C64.9232 49.7317 64.9232 48.4654 64.1421 47.6843L51.4142 34.9564ZM50 64.3706H52L52 36.3706H50H48L48 64.3706H50Z" fill="black"/>
+            </svg>
+        </div>
+        <div class="flex flex-col gap-[0.5vw]">
+            <span class="cursor-pointer uppercase text-[1vw] text-[#F6F6F660] ml-[0.5vw] " (click)="scrollToAnchor(ANCHORS_IN_PAGE.about)">обо мне</span>
+            <span class="cursor-pointer uppercase text-[1vw] text-[#F6F6F660] ml-[0.5vw] " (click)="scrollToAnchor(ANCHORS_IN_PAGE.skills)">скилы</span>
+            <span class="cursor-pointer uppercase text-[1vw] text-[#F6F6F660] ml-[0.5vw] " (click)="scrollToAnchor(ANCHORS_IN_PAGE.education)">образование</span>
+            <span class="cursor-pointer uppercase text-[1vw] text-[#F6F6F660] ml-[0.5vw] " (click)="scrollToAnchor(ANCHORS_IN_PAGE.projects)">проекты</span>
+            <span class="cursor-pointer uppercase text-[1vw] text-[#F6F6F660] ml-[0.5vw] " (click)="scrollToAnchor(ANCHORS_IN_PAGE.hobby)">видео</span>
+        </div>
+    </div>
 </div>

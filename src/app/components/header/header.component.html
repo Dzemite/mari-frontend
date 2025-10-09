@@ -15,11 +15,11 @@
         </div>
         <div class="w-[46vw] flex flex-col justify-center items-end">
             <div class="flex gap-[1.056vw] text-[1.1vw] uppercase">
-                <span class="cursor-pointer">обо мне</span>
-                <span class="cursor-pointer">скилы</span>
-                <span class="cursor-pointer">образование</span>
-                <span class="cursor-pointer">проекты</span>
-                <span class="cursor-pointer">видео</span>
+                <span class="cursor-pointer" (click)="scrollToAnchor(ANCHORS_IN_PAGE.about)">обо мне</span>
+                <span class="cursor-pointer" (click)="scrollToAnchor(ANCHORS_IN_PAGE.skills)">скилы</span>
+                <span class="cursor-pointer" (click)="scrollToAnchor(ANCHORS_IN_PAGE.education)">образование</span>
+                <span class="cursor-pointer" (click)="scrollToAnchor(ANCHORS_IN_PAGE.projects)">проекты</span>
+                <span class="cursor-pointer" (click)="scrollToAnchor(ANCHORS_IN_PAGE.hobby)">видео</span>
             </div>
             <div class="text-[0.8vw] opacity-100 text-black">.</div>
         </div>
@@ -62,7 +62,7 @@
                 <div class="mt-1 ml-[1px] w-[8.5vw] 2xl:text-lg xl:text-sm text-xs">
                     <span>Меня вдохновляет моя работа</span>
                 </div>
-                <div class="mt-1 mr-[1px] flex flex-col text-end">
+                <div class="mt-1 mr-[1px] flex flex-col text-end gap-[0.5vw]">
                     <span class="underline underline-offset-4 2xl:text-lg xl:text-sm text-xs cursor-pointer">Behance</span>
                     <span class="underline underline-offset-4 2xl:text-lg xl:text-sm text-xs cursor-pointer">Telegram</span>
                     <span class="underline underline-offset-4 2xl:text-lg xl:text-sm text-xs cursor-pointer">Резюме pdf</span>

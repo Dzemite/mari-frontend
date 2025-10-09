@@ -1,0 +1,52 @@
+:host {
+  display: block;
+  width: 100%;
+  
+  .croc-big-img {
+    background-image: url('/assets/images/croc-big.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .leonardo {
+    background-image: url('/assets/images/leonardo.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .deepseek {
+    background-image: url('/assets/images/deepseek.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .sber {
+    background-image: url('/assets/images/sber.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .figma {
+    background-image: url('/assets/images/figma.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .blue-rect {
+    background-image: url('/assets/images/blue-rect.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .rect {
+    width: 0.4vw;
+    height: 0.4vw;
+    background-color: black;
+  }
+}

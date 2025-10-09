@@ -1,0 +1,74 @@
+<div class="flex flex-col">
+  <div class="flex justify-between mb-[2.5vw]">
+    <div class="uppercase text-[3.8vw]">
+        <span class="uppercase">п<span class="pixel-text text-[4.8vw]">р</span>оекты</span>
+    </div>
+    <div class="flex gap-[1vw] items-center text-[1vw]">
+      @for (filter of filters; track $index) {
+        <div
+          class="flex justify-center items-center h-[3.2vw] min-w-[8.5vw] text-[1vw] uppercase rounded-[1.6vw] bg-white cursor-pointer"
+          [ngStyle]="{
+            'background-color': selectedFilter === filter.id ? '#000' : '',
+            'color': selectedFilter === filter.id ? '#fff' : '',
+          }"
+          (click)="changeFilter(filter.id)"
+        >
+          <span>{{filter.title}}</span>
+          <span class="text-[0.6vw] mb-[1vw]">({{filter.count}})</span>
+        </div>
+      }
+    </div>
+    <div>
+      <span class="underline text-[1vw]">Behance all</span>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="flex flex-col">
+    @if (selectedFilter === PROJECT_TYPES.ALL || selectedFilter === PROJECT_TYPES.CRM) {
+      <ng-container *ngTemplateOutlet="projectsView; context: { projects: crmProjects, title: 'CRM' }"></ng-container>
+    }
+    @if (selectedFilter === PROJECT_TYPES.ALL || selectedFilter === PROJECT_TYPES.WEB_DESIGN) {
+      <ng-container *ngTemplateOutlet="projectsView; context: { projects: webDesignProjects, title: 'WEB DESIGN' }"></ng-container>
+    }
+    @if (selectedFilter === PROJECT_TYPES.ALL || selectedFilter === PROJECT_TYPES.MOBILE_APP) {
+      <ng-container *ngTemplateOutlet="projectsView; context: { projects: mobileAppProjects, title: 'MOBILE APP' }"></ng-container>
+    }
+  </div>
+</div>
+
+<ng-template #projectsView let-projects="projects" let-title="title">
+  <div class="flex justify-center mb-[1vw] mt-[2vw]">
+    <span class="text-[2vw] font-medium">{{title}}</span>
+  </div>
+  @for (project of projects; track $index) {
+    <div class="flex mb-[1vw]">
+      <div class="flex basis-[30%]">
+        <div class="text-[1.5vw] basis-[50%]">
+          <span>{{project.title}}</span>
+        </div>
+        <div class="flex flex-col text-[1vw] basis-[50%] gap-[0.5vw] text-[#18181870]">
+          @for (tag of project.tags; track $index) {
+            <span>{{tag}}</span>
+          }
+        </div>
+      </div>
+      <div
+        class="flex flex-col basis-[40%] h-[29vw] rounded-[5px]" 
+        [ngStyle]="{
+          'background-image': `url(${project.imageUrl})`,
+          'background-size': 'cover',
+          'background-position': 'center',
+          'background-repeat': 'no-repeat'
+        }"  
+      ></div>
+      <div class="flex basis-[30%] text-[1vw] flex justify-end">
+        @if(project.link.url) {
+          <a [href]="project.link.url" target="_blank" class="underline">{{project.link.text}}</a>
+        } @else {
+          <span class="text-[#18181870]">{{project.link.text}}</span>
+        }
+      </div>
+    </div>
+  }
+  <mat-divider></mat-divider>
+</ng-template>

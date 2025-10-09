@@ -1,0 +1,29 @@
+<mat-divider></mat-divider>
+<div class="flex mt-[1.5vw]">
+    <div class="basis-[50%] uppercase text-[3.8vw]">
+        <span>Образование</span>
+    </div>
+    <div class="flex flex-col basis-[50%] gap-[0.8vw]">
+        @for (element of elements; track $index) {
+            <ng-container *ngTemplateOutlet="myReusableTemplate; context: { element }"></ng-container>
+        }
+    </div>
+</div>
+
+<ng-template #myReusableTemplate let-element="element">
+    <div class="flex flex-col relative gap-[0.8vw]">
+        <span class="absolute top-[5px] right-[102%] uppercase text-[1vw] text-[#18181870] italic">({{element.title}})</span>
+        @for (item of element.items; track $index) {
+        <div class="flex flex-col gap-[0.5vw]">
+            <div class="flex gap-2 items-center">
+                <span class="text-[2vw]">{{item.title}}</span>
+                <span class="text-[1vw]">{{item.subtitle}}</span>
+            </div>
+            <div class="text-[0.85vw] text-[#18181870]">
+                <span>{{item.description}}</span>
+            </div>
+        </div>
+        }
+        <mat-divider></mat-divider>
+    </div>
+</ng-template>
