@@ -66,7 +66,7 @@ export class ProjectsComponent {
       imageUrl: '/assets/images/highway-crm.png',
       link: {
         text: 'Кейс на Behance',
-        url: 'https://www.behance.net/',
+        url: 'https://www.behance.net/gallery/236043157/Highway-CRM-SaaS-UXUI',
       },
       wip: false
     },
@@ -78,7 +78,7 @@ export class ProjectsComponent {
       imageUrl: '/assets/images/medlife.png',
       link: {
         text: 'Кейс на Behance',
-        url: 'https://www.behance.net/',
+        url: 'https://www.behance.net/gallery/236324923/Medical-senter-medlajf',
       },
       wip: false
     },
@@ -89,7 +89,7 @@ export class ProjectsComponent {
       tags: ['2025', 'Mobille IOS', 'MVP'],
       imageUrl: '/assets/images/avia-life.png',
       link: {
-        text: 'скоро Кейс на Behance',
+        text: 'In progress',
         url: null,
       },
       wip: true
