@@ -86,7 +86,7 @@ export class ProjectsComponent {
       type: PROJECT_TYPES.MOBILE_APP,
       title: 'Avia Life',
       subtitle: '',
-      tags: ['2025', 'Mobille IOS', 'MVP'],
+      tags: ['2025', 'Mobile IOS', 'MVP'],
       imageUrl: '/assets/images/avia-life.png',
       link: {
         text: 'In progress',
