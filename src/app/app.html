@@ -1,5 +1,9 @@
-<app-header></app-header>
-<div class="w-full bg-[#F4F4F4]">
-    <router-outlet />
-</div>
-<app-footer></app-footer>
+@if(isMobile) {
+    <app-mobile-mock-view></app-mobile-mock-view>
+} @else {
+    <app-header></app-header>
+    <div class="w-full bg-[#F4F4F4]">
+        <router-outlet />
+    </div>
+    <app-footer></app-footer>
+}
