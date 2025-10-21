@@ -1,4 +1,4 @@
-<div class="footer w-full h-[23vw] mt-[3.5vw] pt-[3.5vw] pb-[1.5vw] px-[4vw] bg-black flex justify-between">
+<div class="footer hidden sm:flex justify-between w-full h-[23vw] mt-[3.5vw] pt-[3.5vw] pb-[1.5vw] px-[4vw] bg-black">
     <div class="flex flex-col justify-between">
         <div class="flex flex-col gap-[1vw]">
             <div class="flex flex-col">
@@ -29,5 +29,37 @@
             <span class="cursor-pointer uppercase text-[1vw] text-[#F6F6F660] ml-[0.5vw] " (click)="scrollToAnchor(ANCHORS_IN_PAGE.projects)">проекты</span>
             <span class="cursor-pointer uppercase text-[1vw] text-[#F6F6F660] ml-[0.5vw] " (click)="scrollToAnchor(ANCHORS_IN_PAGE.hobby)">видео</span>
         </div>
+    </div>
+</div>
+
+<!-- Mobile footer -->
+<div class="flex flex-col sm:hidden bg-black px-[3vw] pt-[16vw]">
+    <div class="relative flex justify-start h-[24vw]">
+        <div class="flex flex-col">
+            <span class="text-[3.6vw] text-[#F6F6F6] uppercase">Nikolaeva Maria</span>
+            <span class="text-[2.15vw] text-[#565656] opacity-70">UX/UI & Product Designer</span>
+        </div>
+        <div class="flex justify-center items-center w-full h-full absolute left-0 top-0">
+            <div class="avatar-img w-[24vw] h-[24vw] rounded-full"></div>
+        </div>
+    </div>
+    <div class="flex flex-col items-center mt-[6vw]">
+        <div class="text-[4.25vw] text-center text-white opacity-50 font-normal leading-[110%]">
+            <markdown>{{text}}</markdown>
+        </div>
+        <a href="https://t.me/MariaF_Nikolaeva" target="_blank" class="underline underline-offset-4 text-white text-[4.25vw] mt-[6vw]">Telegram</a>
+    </div>
+    <div class="flex mt-[12vw]">
+        <div class="basis-[50%]"></div>
+        <div class="flex flex-col gap-[0.5vw] basis-[50%] text-[4.25vw]">
+            <span class="cursor-pointer uppercase text-[#F6F6F660] ml-[0.5vw] " (click)="scrollToAnchor(ANCHORS_IN_PAGE.about)">обо мне</span>
+            <span class="cursor-pointer uppercase text-[#F6F6F660] ml-[0.5vw] " (click)="scrollToAnchor(ANCHORS_IN_PAGE.skills)">скилы</span>
+            <span class="cursor-pointer uppercase text-[#F6F6F660] ml-[0.5vw] " (click)="scrollToAnchor(ANCHORS_IN_PAGE.education)">образование</span>
+            <span class="cursor-pointer uppercase text-[#F6F6F660] ml-[0.5vw] " (click)="scrollToAnchor(ANCHORS_IN_PAGE.projects)">проекты</span>
+            <span class="cursor-pointer uppercase text-[#F6F6F660] ml-[0.5vw] " (click)="scrollToAnchor(ANCHORS_IN_PAGE.hobby)">видео</span>
+        </div>
+    </div>
+    <div class="flex justify-center items-center mt-[17vw] mb-[15vw]">
+        <span class="text-[3.75vw] text-[#ffffff50]">© Nikolaeva Maria 2025</span>
     </div>
 </div>

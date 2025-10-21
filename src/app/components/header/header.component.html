@@ -1,31 +1,53 @@
 <div class="relative w-full flex flex-col justify-between text-tx-white" [ngStyle]="{'background-color': (headerService.headerColor$ | async)}">
-    <section class="w-full h-[5.209vw]">
+    <section class="w-full h-[13.5vw] sm:h-[5.209vw]">
         <!-- this is for header -->
     </section>
-    <section class="flex justify-center w-full h-[5.209vw] gap-[20px] fixed z-9999" [ngStyle]="{'background-color': (headerService.headerColor$ | async)}">
+    <section class="flex justify-center w-full h-[13.5vw] sm:h-[5.209vw] px-[3vw] sm:px-0 gap-[20px] fixed z-99" [ngStyle]="{'background-color': (headerService.headerColor$ | async)}">
         <div class="w-[46vw] flex justify-between items-center">
             <div class="flex flex-col">
-                <span class="text-[1.1vw] uppercase">Nikolaeva Maria</span>
-                <span class="text-[0.8vw] opacity-50">UX/UI & Product Designer</span>
+                <span class="text-[3.6vw] sm:text-[1.1vw] uppercase">Nikolaeva Maria</span>
+                <span class="text-[2.15vw] sm:text-[0.8vw] opacity-50">UX/UI & Product Designer</span>
             </div>
             <div class="flex flex-col w-[8.55vw] whitespace-nowrap">
-                <span class="text-[1.1vw] uppercase">Санкт-петербург, Россия</span>
-                <span class="text-[0.8vw] opacity-50">(GMT+3)</span>
+                <span class="text-[3.6vw] sm:text-[1.1vw] uppercase">Санкт-петербург, Россия</span>
+                <span class="text-[2.15vw] sm:text-[0.8vw] opacity-50">(GMT+3)</span>
             </div>
         </div>
         <div class="w-[46vw] flex flex-col justify-center items-end">
-            <div class="flex gap-[1.056vw] text-[1.1vw] uppercase">
+            <div class="hidden sm:flex gap-[1.056vw] text-[1.1vw] uppercase">
                 <span class="cursor-pointer" (click)="scrollToAnchor(ANCHORS_IN_PAGE.about)">обо мне</span>
                 <span class="cursor-pointer" (click)="scrollToAnchor(ANCHORS_IN_PAGE.skills)">скилы</span>
                 <span class="cursor-pointer" (click)="scrollToAnchor(ANCHORS_IN_PAGE.education)">образование</span>
                 <span class="cursor-pointer" (click)="scrollToAnchor(ANCHORS_IN_PAGE.projects)">проекты</span>
                 <span class="cursor-pointer" (click)="scrollToAnchor(ANCHORS_IN_PAGE.hobby)">видео</span>
             </div>
-            <div class="text-[0.8vw] opacity-100 text-black">.</div>
+            <div class="hidden sm:block text-[0.8vw] opacity-100 text-black">.</div>
+
+            <!-- for mobile -->
+            <div class="flex sm:hidden cursor-pointer justify-center items-center" [matMenuTriggerFor]="menu">
+                <mat-icon aria-hidden="false" aria-label="menu" fontIcon="menu"></mat-icon>
+            </div>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="scrollToAnchor(ANCHORS_IN_PAGE.about)">
+                    <span class="uppercase text-white">обо мне</span>
+                </button>
+                <button mat-menu-item (click)="scrollToAnchor(ANCHORS_IN_PAGE.skills)">
+                    <span class="uppercase text-white">скилы</span>
+                </button>
+                <button mat-menu-item (click)="scrollToAnchor(ANCHORS_IN_PAGE.education)">
+                    <span class="uppercase text-white">образование</span>
+                </button>
+                <button mat-menu-item (click)="scrollToAnchor(ANCHORS_IN_PAGE.projects)">
+                    <span class="uppercase text-white">проекты</span>
+                </button>
+                <button mat-menu-item (click)="scrollToAnchor(ANCHORS_IN_PAGE.hobby)">
+                    <span class="uppercase text-white">видео</span>
+                </button>
+            </mat-menu>
         </div>
     </section>
     @if(headerService.headerFull$ | async) {
-        <section class="flex justify-center w-full gap-[20px]">
+        <section class="hidden sm:flex justify-center w-full gap-[20px]">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 604" fill="none" class="w-[46vw] h-[32vw]">
                 <path d="M0 604V0H160.723V85.4806H397.83V170.022H534.684V423.241L715.54 424.585V0H880V604H715.54V519.459H538.133V433.978H372.369V179.415H160.723L162.315 604H0Z" fill="#181818"/>
             </svg>
@@ -34,7 +56,7 @@
                 <path d="M880 604H756.438V159.476H752.219L490.027 599.396H389.973L127.178 159.476H122.959V604H0V0H156.11L437.589 476.754H442.411L723.288 0H880V604Z" fill="#181818"/>
             </svg>
         </section>
-        <section class="flex justify-center w-full gap-[20px] absolute left-0 bottom-0">
+        <section class="hidden sm:flex justify-center w-full gap-[20px] absolute left-0 bottom-0">
             <div class="w-[46vw] h-[32vw] flex flex-col">
                 <div class="
                     avatar-img absolute top-[12.85vw] left-[12.3vw] rounded-full
@@ -66,6 +88,31 @@
                     <a href="https://www.behance.net/7313997f" target="_blank" class="underline underline-offset-4 2xl:text-lg xl:text-sm text-xs cursor-pointer">Behance</a>
                     <a href="https://t.me/MariaF_Nikolaeva" target="_blank" class="underline underline-offset-4 2xl:text-lg xl:text-sm text-xs cursor-pointer">Telegram</a>
                     <a href="/assets/files/Nikolaeva_Maria_Fedorovna.pdf" target="_blank" class="underline underline-offset-4 2xl:text-lg xl:text-sm text-xs cursor-pointer">Резюме pdf</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- for mobile -->
+        <section class="flex flex-col sm:hidden justify-between h-[calc(100vh-13.5vw)] w-[100vw] px-[3vw]">
+            <div class="flex justify-between relative h-[35%] w-full mt-[10vw] text-[4.25vw]">
+                <div class="flex h-full items-start">
+                    <span class="!leading-[160%]">Меня <br>вдохновляет <br>моя работа</span>
+                </div>
+                <div class="flex flex-col justify-end items-end gap-[3vw] h-full">
+                    <a href="https://www.behance.net/7313997f" target="_blank" class="underline underline-offset-3 cursor-pointer">Behance</a>
+                    <a href="https://t.me/MariaF_Nikolaeva" target="_blank" class="underline underline-offset-3 cursor-pointer">Telegram</a>
+                    <a href="/assets/files/Nikolaeva_Maria_Fedorovna.pdf" target="_blank" class="underline underline-offset-3 cursor-pointer">Резюме pdf</a>
+                </div>
+                <div class="absolute flex justify-center items-end h-full w-full">
+                    <div class="croc-img w-[34vw] h-[38vw]"></div>
+                </div>
+            </div>
+            <div class="h-[50%] flex flex-col gap-[10vw]">
+                <div class="avatar-img w-[18vw] h-[18vw] rounded-full"></div>
+                <div class="flex flex-col">
+                    <span class="text-[9vw]">Привет!</span>
+                    <span class="text-[9vw]">Я, Николаева Мария</span>
+                    <span class="text-[6.15vw] opacity-50">UX/UI & Product Designer</span>
                 </div>
             </div>
         </section>

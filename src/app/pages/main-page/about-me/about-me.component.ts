@@ -79,7 +79,7 @@ export class AboutMeComponent {
     },
     {
       title: '2018 — 2023',
-      subtitle: 'Межрайонная ИФНС России № 8, № 7 по Санкт-Петербургу',
+      subtitle: 'Межрайонная ИФНС России №8, №7 по Санкт-Петербургу',
       link: {
         title: '',
         url: ''

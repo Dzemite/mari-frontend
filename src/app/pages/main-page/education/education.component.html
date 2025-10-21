@@ -1,6 +1,6 @@
 <mat-divider></mat-divider>
-<div class="flex mt-[1.5vw]">
-    <div class="basis-[50%] uppercase text-[3.8vw]">
+<div class="flex flex-col sm:flex-row mt-[10vw] sm:mt-[1.5vw]">
+    <div class="basis-[50%] uppercase text-[10vw] sm:text-[3.8vw]">
         <span>Образование</span>
     </div>
     <div class="flex flex-col basis-[50%] gap-[0.8vw]">
@@ -11,15 +11,15 @@
 </div>
 
 <ng-template #myReusableTemplate let-element="element">
-    <div class="flex flex-col relative gap-[0.8vw]">
-        <span class="absolute top-[5px] right-[102%] uppercase text-[1vw] text-[#18181870] italic">({{element.title}})</span>
+    <div class="flex flex-col relative gap-[6vw] sm:gap-[0.8vw]">
+        <span class="sm:absolute top-[5px] right-[102%] uppercase text-[4.55vw] sm:text-[1vw] text-[#18181870] italic mt-[5vw] sm:mt-[0] font-medium sm:font-normal">({{element.title}})</span>
         @for (item of element.items; track $index) {
-        <div class="flex flex-col gap-[0.5vw]">
+        <div class="flex flex-col gap-[1vw] sm:gap-[0.5vw] font-medium sm:font-normal">
             <div class="flex gap-2 items-center">
-                <span class="text-[2vw]">{{item.title}}</span>
-                <span class="text-[1vw]">{{item.subtitle}}</span>
+                <span class="text-[5vw] sm:text-[2vw] whitespace-nowrap">{{item.title}}</span>
+                <span class="text-[4vw] sm:text-[1vw]">{{item.subtitle}}</span>
             </div>
-            <div class="text-[0.85vw] text-[#18181870]">
+            <div class="text-[3.5vw] sm:text-[0.85vw] text-[#18181870]">
                 <span>{{item.description}}</span>
             </div>
         </div>
