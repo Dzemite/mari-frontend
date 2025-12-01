@@ -1,7 +1,7 @@
 <mat-divider></mat-divider>
 <div class="flex flex-col sm:flex-row mt-[10vw] sm:mt-[1.5vw]">
-    <div class="basis-[50%] uppercase text-[10vw] sm:text-[3.8vw]">
-        <span>Образование</span>
+    <div class="basis-[50%] uppercase text-[6vw] sm:text-[1.9vw] font-semibold">
+        <span><span class="pixel-text text-[7vw] sm:text-[2.4vw]">O</span>бразование</span>
     </div>
     <div class="flex flex-col basis-[50%] gap-[0.8vw]">
         @for (element of elements; track $index) {
@@ -12,7 +12,7 @@
 
 <ng-template #myReusableTemplate let-element="element">
     <div class="flex flex-col relative gap-[6vw] sm:gap-[0.8vw]">
-        <span class="sm:absolute top-[5px] right-[102%] uppercase text-[4.55vw] sm:text-[1vw] text-[#18181870] italic mt-[5vw] sm:mt-[0] font-medium sm:font-normal">({{element.title}})</span>
+        <span class="sm:absolute top-[5px] right-[102%] uppercase text-[3.5vw] sm:text-[1vw] text-[#18181870] italic mt-[5vw] sm:mt-[0] font-medium sm:font-normal">({{element.title}})</span>
         @for (item of element.items; track $index) {
         <div class="flex flex-col gap-[1vw] sm:gap-[0.5vw] font-medium sm:font-normal">
             <div class="flex gap-2 items-center">
