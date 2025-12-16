@@ -130,4 +130,10 @@ export class ProjectsComponent {
       this.selectedFilter = filter;
     }
   }
+
+  openUrlBlank(url: string) {
+    if (url) {
+      window.open(url, '_blank');
+    }
+  }
 }

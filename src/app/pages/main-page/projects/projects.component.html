@@ -67,12 +67,16 @@
           }
         </div>
       </div>
-      <div class="flex flex-col basis-[40%] h-[25vw] rounded-[5px]" [ngStyle]="{
-              'background-image': `url(${project.imageUrl})`,
-              'background-size': 'cover',
-              'background-position': 'top center',
-              'background-repeat': 'no-repeat'
-            }"></div>
+      <div
+        (click)="openUrlBlank(project.link.url)"
+        class="flex flex-col basis-[40%] h-[25vw] rounded-[5px]"
+        [ngStyle]="{
+          'background-image': `url(${project.imageUrl})`,
+          'background-size': 'cover',
+          'background-position': 'top center',
+          'background-repeat': 'no-repeat'
+        }"
+      ></div>
       <div class="flex basis-[30%] text-[1vw] flex justify-end">
         @if(project.link.url) {
         <a [href]="project.link.url" target="_blank" class="underline">{{project.link.text}}</a>
